@@ -12,7 +12,7 @@ En este repositorio encontraras mis trabajos de la materia **Desarrollo de Siste
 - [Excepciones](#excepciones)
   - [SchemaError](#schemaerror)
 
-*Para un contenido mas detallado, visita los [Docs](./docs/index.md)
+*Para un contenido mas detallado, visita los [Docs](./docs/index.md)*
 
 # Clases
 [(Volver al indice)](#contenidos)
