@@ -44,3 +44,7 @@ class DBDocument:
             
     def obtener_coleccion(self, nombre_coleccion: str) -> Collection | None:
         return self.colecciones.get(nombre_coleccion, None)
+    
+    def __str__(self):
+        return f'BDDocument {self.nombre} | {len(self.documentos)} Coleccion/es registrados'
+    

@@ -1,18 +1,18 @@
 from .custom_exceptions import *
 
 class Str2Dic():
-    def __init__(self, schema, separator=','):
+    def __init__(self, schema: str, separator=','):
         if (len(schema)) == 0:
             raise SchemaError("El schema esta vacio")
         self.schema = schema.split(separator)
         self.separator = separator
-    def convert(self, row):
-        tmp = row.split(self.separator)
-        if len(tmp) == len(self.schema):
+    def convert(self, row: list[str]) -> dict:
+        linea = row.split(self.separator)
+        if len(linea) == len(self.schema):
             i = 0
             d = {}
-            while i < len(tmp):
-                d[self.schema[i]] = tmp[i]
+            while i < len(linea):
+                d[self.schema[i]] = linea[i]
                 i += 1
             return d
         else:
