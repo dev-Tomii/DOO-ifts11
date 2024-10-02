@@ -17,8 +17,7 @@ def import_collection(path: str) -> Collection:
             id += 1
     return col
 
-personas = import_collection('proyecto/datos_personales.csv')
-
 # Pruebas
+personas = import_collection('proyecto/datos_personales.csv')
 doc = personas.buscar_documento(1)
 print(doc.obtener_valor('Nombre'))
