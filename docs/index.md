@@ -12,6 +12,8 @@ Es una clase que al recibir el contenido de un archivo .csv lo convierte en un d
 |:-------:|:--------------:|:-------:|:---------------------------------------------:|
 | convert | row: list[str] |   dict  | Convierte una linea de un archivo .csv a dict |
 
+---
+
 ### Document
 Es una clase que almacena en forma de diccionario un contenido.
 
@@ -24,6 +26,8 @@ Es una clase que almacena en forma de diccionario un contenido.
 |:---------------:|:-----------------------:|:-------:|:------------------------------------------------:|
 |  obtener_valor  |        clave: str       |   str   |       Ingresa una clave y devuelve su valor      |
 | modificar_valor | clave: str<br>valor:str |   None  | Cambia el valor de la clave ingresada al deseado |
+
+---
 
 ### Collection
 Es una clase que almacena en forma de diccionario un contenido.
@@ -39,6 +43,8 @@ Es una clase que almacena en forma de diccionario un contenido.
 | eliminar_documento |  id_documento: int  |       None       | Elimina un documento de la coleccion con la id ingresada |
 |  buscar_documento  |  id_documento: int  | Document \| None |         Devuelve el documento con la id ingresada        |
 
+---
+
 ### DBDocument
 Es una clase que almacena en forma de diccionario un contenido.
 
@@ -51,6 +57,9 @@ Es una clase que almacena en forma de diccionario un contenido.
 |   crear_coleccion  | nombre_coleccion: str |        None        | Crea una coleccion y la almacena con el nombre ingresado |
 | eliminar_coleccion | nombre_coleccion: str |        None        |       Elimina la coleccion con el nombre ingresado       |
 |  buscar_coleccion  | nombre_coleccion: str | Collection \| None |       Devuelve la coleccion con el nombre ingresado      |
+
+---
+
 ## Excepciones
 
 ### SchemaError
