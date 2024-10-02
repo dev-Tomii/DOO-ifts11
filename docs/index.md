@@ -3,10 +3,14 @@
 ### Str2Dic
 Es una clase que al recibir el contenido de un archivo .csv lo convierte en un diccionario de Python
 
-|  Atributo |     Tipo     |         Descripcion        |
-|:---------:|:------------:|:--------------------------:|
-|     id    |      int     |     la ID del documento    |
-| contenido | dict \| None | El contenido del documento |
+|  Atributo | Tipo |                        Descripcion                        |
+|:---------:|:----:|:---------------------------------------------------------:|
+|   schema  |  str |                El esquema del archivo .csv                |
+| separador |  str | El separador de caracteres de cada item. Por defecto: ',' |
+
+|  Metodo |   Parametros   | Retorno |                  Descripcion                  |
+|:-------:|:--------------:|:-------:|:---------------------------------------------:|
+| convert | row: list[str] |   dict  | Convierte una linea de un archivo .csv a dict |
 
 ### Document
 Es una clase que almacena en forma de diccionario un contenido.
