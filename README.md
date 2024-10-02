@@ -21,15 +21,19 @@ Aqui encontraras un listado de las clases creadas con su utilidad
 
 ### Str2Dic
 Es una clase que al instanciarla con el contenido de un .csv es capaz de convertirlo a un diccionario de Python
+[*(Ir al archivo)*](./proyecto/clases/str2dic.py)
 
 ### Document
 Es una clase que almacena en forma de diccionario un contenido.
+[*(Ir al archivo)*](./proyecto/clases/db.py)
 
 ### Collection
 Es una clase que almacena en forma de diccionario un contenido.
+[*(Ir al archivo)*](./proyecto/clases/db.py)
 
 ### DBDocument
 Es una clase que almacena en forma de diccionario un contenido.
+[*(Ir al archivo)*](./proyecto/clases/db.py)
 
 # Excepciones
 [(Volver al indice)](#contenidos)
@@ -38,3 +42,4 @@ Aqui encontraras las excepciones personalizadas que se crearon
 
 ### SchemaError
 Es una excepcion que marca error en el esquema ingresado
+[*(Ir al archivo)*](./proyecto/clases/custom_exceptions.py)
