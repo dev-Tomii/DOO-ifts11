@@ -3,6 +3,8 @@ from .clases.db import Document
 from .clases.str2dic import Str2Dic
 
 def import_collection(path: str) -> Collection:
+    if (type(path) != str):
+        raise AttributeError("Se ha ingresado una ruta inexistente.")
     with open(path) as f:
         schema = f.readline().replace("\n", "")
         rows = f.readlines()
