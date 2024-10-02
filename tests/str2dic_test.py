@@ -1,5 +1,5 @@
-from proyecto.str2dic import Str2Dic
-from proyecto.custom_exceptions import SchemaError
+from proyecto.clases.str2dic import Str2Dic
+from proyecto.clases.custom_exceptions import SchemaError
 
 f = open("tests/files/users.csv", "rt")
 schema = f.readline().replace("\n", "")
