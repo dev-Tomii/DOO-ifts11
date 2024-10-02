@@ -1,4 +1,4 @@
-from custom_exceptions import *
+from .custom_exceptions import *
 
 class Str2Dic():
     def __init__(self, schema, separator=','):
