@@ -1,5 +1,8 @@
 # DOO IFTS 11
+![add](https://img.shields.io/badge/made_with-%E2%9D%A4%EF%B8%8E-%23E71D29?style=for-the-badge)
 ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
+![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white)
+![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white)
 
 En este repositorio encontraras mis trabajos de la materia **Desarrollo de Sistemas Orientado a Objetos**
 
