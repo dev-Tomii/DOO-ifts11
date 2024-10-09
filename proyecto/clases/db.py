@@ -18,6 +18,8 @@ class Collection:
         self.documentos = {}
     
     def añadir_documento(self, documento: Document) -> None:
+        if (type(documento) != Document):
+            raise TypeError('No se ha ingresado un documento valido')
         self.documentos[documento.id] = documento
         
     def eliminar_documento(self, id_documento: int) -> None:

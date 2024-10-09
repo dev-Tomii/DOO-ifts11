@@ -14,7 +14,7 @@ En este repositorio encontraras mis trabajos de la materia **Desarrollo de Siste
 
 *Para un contenido mas detallado, visita los [Docs](./docs/index.md)*
 
-# Clases
+## Clases
 [(Volver al indice)](#contenidos)
 
 Aqui encontraras un listado de las clases creadas con su utilidad
@@ -39,7 +39,7 @@ Es una clase que almacena en forma de diccionario un contenido.
 
 [*(Ir al archivo)*](./proyecto/clases/db.py)
 
-# Excepciones
+## Excepciones
 [(Volver al indice)](#contenidos)
 
 Aqui encontraras las excepciones personalizadas que se crearon
@@ -48,3 +48,8 @@ Aqui encontraras las excepciones personalizadas que se crearon
 Es una excepcion que marca error en el esquema ingresado
 
 [*(Ir al archivo)*](./proyecto/clases/custom_exceptions.py)
+
+# Guia
+
+Para ejecutar el proyecto entero, por favor ejecuta el archivo main con: `python -m proyecto.main`
+Para ejecutar cualquier archivo de prueba, por favor usa: `python -m tests.{nombre_del_archivo}`
