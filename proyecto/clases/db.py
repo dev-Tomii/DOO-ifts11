@@ -39,8 +39,12 @@ class Collection:
     def get_document(self, id_documento: int) -> Document | None:
         return self.documentos.get(id_documento, None)
     
-    def list_documents(self) -> None:
-        return self.documentos
+    def list_documents(self) -> list[Document]:
+        total = []
+        for i in self.documentos:
+            total.append(self.documentos[i])
+        return total
+        
     
     def __str__(self):
         return f'Coleccion {self.nombre} | {len(self.documentos)} Documento/s registrados'
@@ -70,12 +74,13 @@ class Database:
             parser = Str2Dic(schema)
             col = self.get_collection(name)
             if (col == None):
-                raise NonExistentDocumentError("El documento indicado no existe")
-            id = 0
+                raise NonExistentCollectionError("El documento indicado no existe")
+            doc_id = 0
             for row in rows:
                 item = parser.convert(row.replace("\n", ""))
-                col.add_document(Document(id, item))
-                id += 1
+                col.add_document(Document(doc_id, item))
+                doc_id += 1
+                
     
     def __str__(self):
         return f'BDDocument {self.nombre} | {len(self.documentos)} Coleccion/es registrados'

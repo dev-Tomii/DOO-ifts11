@@ -3,7 +3,7 @@ class SchemaError(Exception):
         self.message = message
         super().__init__(message)
         
-class NonExistentDocumentError(Exception):
+class NonExistentCollectionError(Exception):
     def __init__(self, message):
         self.message = message
         super().__init__(message)

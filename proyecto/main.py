@@ -28,7 +28,7 @@ def main():
         
         elif opcion == "3":
             nombre_coleccion = input("Ingrese el nombre de la colección: ")
-            doc_id = input("Ingrese el ID del documento: ")
+            doc_id = int(input("Ingrese el ID del documento: "))
             coleccion = db.get_collection(nombre_coleccion)
             if coleccion:
                 documento = coleccion.get_document(doc_id)
