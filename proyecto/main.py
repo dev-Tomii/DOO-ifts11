@@ -42,10 +42,10 @@ def main():
         
         elif opcion == "4":
             nombre_coleccion = input("Ingrese el nombre de la colección: ")
-            doc_id = input("Ingrese el ID del documento a eliminar: ")
+            doc_id = int(input("Ingrese el ID del documento a eliminar: "))
             coleccion = db.get_collection(nombre_coleccion)
             if coleccion:
-                coleccion.delete_document(int(doc_id))
+                coleccion.delete_document(doc_id)
         
         elif opcion == "5":
             nombre_coleccion = input("Ingrese el nombre de la colección: ")
