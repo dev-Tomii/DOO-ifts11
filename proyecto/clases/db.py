@@ -33,8 +33,10 @@ class Collection:
         self.documentos[documento.id] = documento
         
     def delete_document(self, id_documento: int) -> None:
-        if id_documento in self.documentos:
-            del self.documentos[id_documento]
+        doc = self.documentos.get(id_documento, None)
+        if doc is None:
+            raise NotFoundError('No se ha encontrado el documento')
+        del self.documentos[id_documento]
             
     def get_document(self, id_documento: int) -> Document | None:
         return self.documentos.get(id_documento, None)
