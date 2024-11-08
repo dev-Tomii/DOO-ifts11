@@ -9,11 +9,13 @@ En este repositorio encontraras mis trabajos de la materia **Desarrollo de Siste
 # Contenidos
 - [Clases](#clases)
   - [Str2Dic](#str2dic)
-  - [Document](#str2dic)
-  - [Collection](#str2dic)
-  - [DBDocument](#str2dic)
+  - [Document](#document)
+  - [Collection](#collection)
+  - [Database](#database)
 - [Excepciones](#excepciones)
   - [SchemaError](#schemaerror)
+  - [NonExistentCollectionError](#nonexistentcollectionerror)
+  - [NotFoundError](#notfounderror)
 
 *Para un contenido mas detallado, visita los [Docs](./docs/index.md)*
 
@@ -37,7 +39,7 @@ Es una clase que almacena en forma de diccionario un contenido.
 
 [*(Ir al archivo)*](./proyecto/clases/db.py)
 
-### DBDocument
+### Database
 Es una clase que almacena en forma de diccionario un contenido.
 
 [*(Ir al archivo)*](./proyecto/clases/db.py)
@@ -50,9 +52,15 @@ Aqui encontraras las excepciones personalizadas que se crearon
 ### SchemaError
 Es una excepcion que marca error en el esquema ingresado
 
+### NonExistentCollectionError
+Es una excepcion que marca que la coleccion es inexistente.
+
+### NotFoundError
+Es una excepcion que marca cuando un objeto no es encontrado.
+
 [*(Ir al archivo)*](./proyecto/clases/custom_exceptions.py)
 
 # Guia
 
-Para ejecutar el proyecto entero, por favor ejecuta el archivo main con: `python -m proyecto.main`
-Para ejecutar cualquier archivo de prueba, por favor usa: `python -m tests.{nombre_del_archivo}`
+- Para ejecutar el proyecto entero, por favor ejecuta el archivo main con: `python -m proyecto.main`
+- Para ejecutar cualquier archivo de prueba, por favor usa: `python -m tests.{nombre_del_archivo}`
