@@ -62,5 +62,5 @@ Es una excepcion que marca cuando un objeto no es encontrado.
 
 # Guia
 
-Para ejecutar el proyecto entero, por favor ejecuta el archivo main con: `python -m proyecto.main`
-Para ejecutar cualquier archivo de prueba, por favor usa: `python -m tests.{nombre_del_archivo}`
+- Para ejecutar el proyecto entero, por favor ejecuta el archivo main con: `python -m proyecto.main`
+- Para ejecutar cualquier archivo de prueba, por favor usa: `python -m tests.{nombre_del_archivo}`
