@@ -22,10 +22,11 @@ Es una clase que almacena en forma de diccionario un contenido.
 |     id    |      int     |     la ID del documento    |
 | contenido | dict \| None | El contenido del documento |
 
-|      Metodo     |        Parametros       | Retorno |                    Descripcion                   |
-|:---------------:|:-----------------------:|:-------:|:------------------------------------------------:|
-|  obtener_valor  |        clave: str       |   str   |       Ingresa una clave y devuelve su valor      |
-| modificar_valor | clave: str<br>valor:str |   None  | Cambia el valor de la clave ingresada al deseado |
+|    Metodo    |        Parametros       | Retorno |                              Descripcion                              |
+|:------------:|:-----------------------:|:-------:|:---------------------------------------------------------------------:|
+|   get_value  |        clave: str       |   str   |                 Ingresa una clave y devuelve su valor                 |
+| modify_value | clave: str<br>valor:str |   str   |            Cambia el valor de la clave ingresada al deseado           |
+|    to_json   |                         |   str   | Devuelve en un str formatteado estilo json el contenido del documento |
 
 ---
 
@@ -37,26 +38,29 @@ Es una clase que almacena en forma de diccionario un contenido.
 |   nombre   |  str | El nombre de la coleccion |
 | documentos | dict |  Contiene los documentos  |
 
-|       Metodo       |      Parametros     |      Retorno     |                        Descripcion                       |
-|:------------------:|:-------------------:|:----------------:|:--------------------------------------------------------:|
-|  añadir_documento  | documento: Document |       None       |             Añade un documento a la coleccion            |
-| eliminar_documento |  id_documento: int  |       None       | Elimina un documento de la coleccion con la id ingresada |
-|  buscar_documento  |  id_documento: int  | Document \| None |         Devuelve el documento con la id ingresada        |
+|      Metodo     |      Parametros     |      Retorno     |                        Descripcion                       |
+|:---------------:|:-------------------:|:----------------:|:--------------------------------------------------------:|
+|   add_document  | documento: Document |       None       |             Añade un documento a la coleccion            |
+| delete_document |  id_documento: int  |       None       | Elimina un documento de la coleccion con la id ingresada |
+|   get_document  |  id_documento: int  | Document \| None |         Devuelve el documento con la id ingresada        |
+|  list_documents |                     |  list[Document]  |        Devuelve todos los documentos en una lista        |  
 
 ---
 
-### DBDocument
+### Database
 Es una clase que almacena en forma de diccionario un contenido.
 
-|   Atributo  | Tipo |        Descripcion       |
-|:-----------:|:----:|:------------------------:|
-| colecciones | dict | Contiene las colecciones |
+|   Atributo   | Tipo |         Descripcion        |
+|:------------:|:----:|:--------------------------:|
+|    nombre    |  str | Nombre de la base de datos |
+| collecciones | dict |  Contiene las collecciones |
 
-|       Metodo       |       Parametros      |       Retorno      |                        Descripcion                       |
-|:------------------:|:---------------------:|:------------------:|:--------------------------------------------------------:|
-|   crear_coleccion  | nombre_coleccion: str |        None        | Crea una coleccion y la almacena con el nombre ingresado |
-| eliminar_coleccion | nombre_coleccion: str |        None        |       Elimina la coleccion con el nombre ingresado       |
-|  buscar_coleccion  | nombre_coleccion: str | Collection \| None |       Devuelve la coleccion con el nombre ingresado      |
+|       Metodo      |       Parametros       |       Retorno      |                                                              Descripcion                                                              |
+|:-----------------:|:----------------------:|:------------------:|:-------------------------------------------------------------------------------------------------------------------------------------:|
+| create_collection |  nombre_coleccion: str |        None        |                                        Crea una coleccion y la almacena con el nombre ingresado                                       |
+| delete_collection |  nombre_coleccion: str |        None        |                                              Elimina la coleccion con el nombre ingresado                                             |
+|   get_collection  |  nombre_coleccion: str | Collection \| None |                           Devuelve la coleccion con el nombre ingresado si existe, caso contrario sera None.                          |
+|     import_csv    | name: str<br>path: str |        None        | Importa todas las lineas del archivo .csv ingresado en formato de Documento y las almacena en la coleccion que coincida con el nombre |
 
 ---
 
@@ -64,3 +68,9 @@ Es una clase que almacena en forma de diccionario un contenido.
 
 ### SchemaError
 Es una excepcion que marca error en el esquema ingresado
+
+### NonExistentCollectionError
+Es una excepcion que marca que la coleccion es inexistente.
+
+### NotFoundError
+Es una excepcion que marca cuando un objeto no es encontrado.
